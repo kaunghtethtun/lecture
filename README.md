@@ -6,27 +6,27 @@ This project demonstrates core machine learning classification ideas using small
 
 ```mermaid
 flowchart TD
-    A[Generate or Simulate Dataset\nmake_blobs / make_circles / numpy random] --> B[Visualize Raw Data\nmatplotlib scatter]
-    B --> C[Choose Model\nGaussianNB or SVM]
-    C --> D[Train Model\nfit X,y]
-    D --> E[Create Mesh Grid\nfor decision region]
-    E --> F[Predict on Grid\npredict each point]
-    F --> G[Plot Decision Boundary\ncontourf + scatter]
-    G --> H[Compare Behavior\nlinear vs nonlinear, margin, outliers]
+    A["Generate or Simulate Dataset<br/>make_blobs / make_circles / numpy random"] --> B["Visualize Raw Data<br/>matplotlib scatter"]
+    B --> C["Choose Model<br/>GaussianNB or SVM"]
+    C --> D["Train Model<br/>fit X,y"]
+    D --> E["Create Mesh Grid<br/>for decision region"]
+    E --> F["Predict on Grid<br/>predict each point"]
+    F --> G["Plot Decision Boundary<br/>contourf + scatter"]
+    G --> H["Compare Behavior<br/>linear vs nonlinear, margin, outliers"]
 ```
 
 ### Script Map
 
 ```mermaid
 graph LR
-    N1[Naive/naive.py\nGaussian Naive Bayes boundary]
-    N2[Naive/naive_svm1.py\nNaive Bayes vs Linear SVM]
+    N1["Naive/naive.py<br/>Gaussian Naive Bayes boundary"]
+    N2["Naive/naive_svm1.py<br/>Naive Bayes vs Linear SVM"]
 
-    S1[SVM/margin.py\nmax margin + support vectors]
-    S2[SVM/margin_support.py\n3D margin planes + SVs]
-    S3[SVM/3dlinear.py\n3D linear separating plane]
-    S4[SVM/non_linear.py\nRBF kernel on circles]
-    S5[SVM/remove_data.py / remove_data_2.py / test.py\nextra experiments]
+    S1["SVM/margin.py<br/>max margin + support vectors"]
+    S2["SVM/margin_support.py<br/>3D margin planes + SVs"]
+    S3["SVM/3dlinear.py<br/>3D linear separating plane"]
+    S4["SVM/non_linear.py<br/>RBF kernel on circles"]
+    S5["SVM/remove_data.py / remove_data_2.py / test.py<br/>extra experiments"]
 ```
 
 ## Setup and Run
@@ -108,12 +108,12 @@ In your `Naive/naive.py`, this produces a smooth curved boundary that adapts to 
 
 ```mermaid
 flowchart LR
-    A[Dataset with different class spreads + outlier] --> B[Gaussian Naive Bayes]
-    A --> C[Linear SVM]
-    B --> D[Curved probabilistic boundary]
-    C --> E[Straight maximum-margin boundary]
-    D --> F[Good when class distributions are Gaussian-like]
-    E --> G[Strong for clear linear separation and margin control]
+    A["Dataset with different class spreads + outlier"] --> B["Gaussian Naive Bayes"]
+    A --> C["Linear SVM"]
+    B --> D["Curved probabilistic boundary"]
+    C --> E["Straight maximum-margin boundary"]
+    D --> F["Good when class distributions are Gaussian-like"]
+    E --> G["Strong for clear linear separation and margin control"]
 ```
 
 `Naive/naive_svm1.py` is the direct comparison script.

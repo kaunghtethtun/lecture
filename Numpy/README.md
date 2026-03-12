@@ -76,14 +76,14 @@ Functions and usage:
 
 ```mermaid
 flowchart LR
-    X[Input X] --> L1[Z1 = X@W1 + b1]
-    L1 --> A1[A1 = sigmoid(Z1)]
-    A1 --> L2[Z2 = A1@W2 + b2]
-    L2 --> YP[y_pred = sigmoid(Z2)]
-    YP --> LOSS[MSE Loss]
-    LOSS --> B2[dW2 db2]
-    B2 --> B1[dW1 db1]
-    B1 --> U[Update Parameters]
+    X["Input X"] --> L1["Z1 = X dot W1 + b1"]
+    L1 --> A1["A1 = sigmoid(Z1)"]
+    A1 --> L2["Z2 = A1 dot W2 + b2"]
+    L2 --> YP["y_pred = sigmoid(Z2)"]
+    YP --> LOSS["MSE Loss"]
+    LOSS --> B2["dW2 db2"]
+    B2 --> B1["dW1 db1"]
+    B1 --> U["Update Parameters"]
 ```
 
 ## Shape Format Reference
